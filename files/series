@@ -4,3 +4,5 @@ intel/bytmax.patch
 overload-on-wakeup.patch
 security/0001-Sync-Ubuntu-Artful-s-master-next-apparmor-implementa.patch
 security/0002-security-Port-securityfs-changes-for-Ubuntu-s-apparm.patch
+add-acs-overrides.patch
+i915-vga-arbiter.patch
