@@ -1,8 +1,8 @@
 name       : linux-current
-version    : 4.14.5
-release    : 39
+version    : 4.14.12
+release    : 44
 source     :
-    - https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.14.5.tar.xz : d589a3bc033499d53d4ff2caae83ee6fd2b9c794c8c7632ae42b656d202975da
+    - https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.14.12.tar.xz : 6608f7d480efc5c1078888e9344f4e0b0cd9bef0b6541cbdaec7d138e03856af
 license    :
     - GPL-2.0
 component  :
@@ -25,7 +25,6 @@ builddeps  :
     - kbd
     - linux-firmware
     - lz4
-    - kbd
     - multipath-tools
     - perl
     - prelink
