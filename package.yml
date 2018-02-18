@@ -1,8 +1,8 @@
 name       : linux-current
-version    : 4.14.12
-release    : 44
+version    : 4.15.3
+release    : 53
 source     :
-    - https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.14.12.tar.xz : 6608f7d480efc5c1078888e9344f4e0b0cd9bef0b6541cbdaec7d138e03856af
+    - https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.15.3.tar.xz : 8fb86ea1b7144ed6c86542b74159e3cd8b9009943330987e49322760a300b714
 license    :
     - GPL-2.0
 component  :
@@ -49,6 +49,7 @@ setup      : |
     %make ARCH=x86_64 oldconfig
 build      : |
     %make ARCH=x86_64 CONFIG_DEBUG_SECTION_MISMATCH=y
+    %make -C tools/objtool
 install    : |
     # Install kernel blob
     kernID="com.solus-project.current"
@@ -110,6 +111,9 @@ install    : |
     install -m 00644 Module.symvers $dstDir/.
     install -m 00644 System.map $dstDir/.
     install -m 00644 .config $dstDir/.config
+
+    # Add objtool binary for CONFIG_STACK_VALIDATION (T5607)
+    install -m 00755 tools/objtool/objtool $dstDir/tools/objtool/objtool
 
     # Fix up build/source links
     ln -sv build $installdir/lib/modules/$kversion/source
