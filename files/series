@@ -5,3 +5,4 @@ security/0001-apparmor-Merge-items-still-missing-from-upstream.patch
 perf/0111-overload-on-wakeup.patch
 i915-vga-arbiter.patch
 add-acs-overrides.patch
+perf/0001-Revert-upstream-CRNG-init-changes.patch
