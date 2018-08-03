@@ -1,8 +1,11 @@
+fixes/0001-battery-safe-unregistering-of-hooks.patch
 intel/linux-2.6-intel-iommu-igfx.patch
 intel/bytmax.patch
 intel/perf-edp.patch
 security/0001-apparmor-Merge-items-still-missing-from-upstream.patch
+security/0002-Fix-network-entry-point-for-apparmor.patch
 perf/0111-overload-on-wakeup.patch
 perf/0001-Revert-upstream-CRNG-init-changes.patch
 i915-vga-arbiter.patch
 add-acs-overrides.patch
+PCI-Add-Intel-7th-8th-Gen-mobile-to-ACS-quirks.patch
